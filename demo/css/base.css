@@ -1,0 +1,57 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body { /*父容器*/
+    background-image: url("../img/login-background.png");
+    display: -webkit-flex; /* Safari */
+    display: flex; /* 设置为弹性盒子容器 */
+    flex-direction: column; /* 主轴为垂直方向，起点为cross start */
+    flex: auto; /* 默认为auto， 即flex-group flex-shrink flex-basis 分别为 1 1 0   即为均分剩余空间，可以缩小，占据主轴空间为原始空间*/
+    background-position-y: bottom; /* 设置初始状态时背景图片在垂直方向上的位置 */
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* 图片大小： 缩小图片以达到自适应尺寸 */
+    background-attachment: fixed; /* 图片位置固定，不会随着滚轮变动 */
+}
+
+.from-container { /*子容器*/
+    display: -webkit-flex; /* Safari */
+    display: flex; /* 设置为弹性盒子容器 */
+    justify-content: center; /* 父容器主轴线为垂直方向， 所以此处垂直居中 */
+    flex-direction: column;
+    flex: auto; /* 默认为auto， 即flex-group flex-shrink flex-basis 分别为 1 1 0   即为均分剩余空间，可以缩小，占据主轴空间为原始空间*/
+    padding: 2.5rem 2.5rem 5rem; /*1rem=16px*/
+    align-items: center; /*该容器相对于父容器，属于item ， 此处可以使用item的属性，让其在纵轴（父容器将纵轴和横轴反转了flex-direction：column）上居中*/
+}
+
+.mb-12 {
+    margin-bottom: 3.75rem; /*和表单拉开距离*/
+}
+.h-40px{
+    height: 40px;
+}
+.from-div {
+    background-color: ghostwhite;
+    box-shadow: 0.1rem 1rem 1rem .25rem rgba(0, 0, 0, .05) !important; /*水平阴影的位置、垂直阴影的位置、模糊、颜色*/
+    border-radius: 0.5rem; /* 圆角效果 */
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-center{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+/* 屏幕尺寸最小为992时，下面的生效 */
+@media (min-width: 992px) {
+    .w-lg-500px {
+        width: 500px !important
+    }
+    .p-lg-15{
+        padding: 3rem;
+    }
+}
