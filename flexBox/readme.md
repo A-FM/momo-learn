@@ -142,6 +142,9 @@
 如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
 ![](https://github.com/A-FM/momo-learn/blob/master/flexBox/img\17.png)
 
+### flex-basis
+定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+
 
 
 
